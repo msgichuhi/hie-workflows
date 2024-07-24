@@ -1,0 +1,54 @@
+title Referral Workflow
+
+participant Clinician
+participant HMIS
+participant LIMS
+
+participant IL
+participant CR
+participant FR
+participant HWR
+participant SHR
+participant TSR
+
+Clinician -> HMIS : Login
+HMIS -> IL: Validate HCW
+IL -> HWR: Validate HCW
+HWR --> IL: Result, true
+IL --> HMIS: Result, true
+
+Clinician->HMIS: Patient enrolment
+HMIS->IL: Patient lookup
+IL->CR: Patient lookup
+
+CR-->IL: Result, CR ID
+IL-->HMIS: Result, CR ID
+
+
+Clinician -> HMIS : start visit
+
+Clinician -> HMIS : Offer service
+HMIS->IL: Pull SHR summary
+IL->SHR: Pull SHR summary
+SHR-->IL: Result, bundle
+IL-->HMIS: Result, bundle
+HMIS->IL: Terminology lookup
+IL->TSR: Terminology lookup
+TSR-->IL: Result, terms
+IL-->HMIS: Result, terms
+
+Clinician->HMIS:Refer Patient\n + End visit
+HMIS->IL:SHR Bundle, Partial Clinical data\n + ServiceRequest - Lab Referrals
+IL->SHR:SHR Bundle, Partial Clinical data\n + ServiceRequest - Lab Referrals
+SHR-->IL: Result, Clinical data creted
+IL-->HMIS: Result, Clinical data creted
+
+LIMS->IL: Fetch Lab Referrals
+IL->SHR: Fetch Lab Referrals
+SHR-->IL: Result
+IL-->LIMS: Result
+
+LIMS->IL: Lab Results
+IL->SHR: Lab Results
+SHR-->IL: Ack
+IL-->LIMS: Ack
