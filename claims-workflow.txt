@@ -1,0 +1,53 @@
+title Claims Workflow
+
+participant Clinician
+participant HMIS
+participant IL
+participant CR
+participant FR
+participant HWR
+participant SHR
+participant TSR
+participant eClaims
+
+Clinician -> HMIS : Login
+HMIS -> IL: Validate HCW
+IL -> HWR: Validate HCW
+HWR --> IL: Result, true
+IL --> HMIS: Result, true
+
+Clinician->HMIS: Patient enrolment
+HMIS->IL: Patient lookup
+IL->CR: Patient lookup
+
+CR-->IL: Result, CR ID
+IL-->HMIS: Result, CR ID
+
+
+Clinician -> HMIS : start visit
+HMIS->IL: Eligibility Request
+IL->eClaims: Eligibility Request
+
+IL<--eClaims: Eligibility Response, valid
+HMIS<--IL: Eligibility Response, valid
+
+Clinician -> HMIS : Patient encounter
+HMIS->IL: Pull SHR summary
+IL->SHR: Pull SHR summary
+SHR-->IL: Result, bundle
+IL-->HMIS: Result, bundle
+HMIS->IL: Terminology lookup
+IL->TSR: Terminology lookup
+TSR-->IL: Result, terms
+IL-->HMIS: Result, terms
+
+HMIS->IL: Pre Auth Request
+IL->eClaims: Pre Auth Request
+eClaims-->IL: Result, Approved
+IL-->HMIS: Result, Approved
+
+Clinician->HMIS: End visit
+HMIS->IL: SHR Bundle, Clinical data + Claims
+IL->SHR: SHR Bundle, Clinical data
+IL->eClaims: SHR Bundle, Claims
+IL-->HMIS: Ack
