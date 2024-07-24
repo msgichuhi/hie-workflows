@@ -1,0 +1,42 @@
+title Patient Visit Summary
+
+participant Clinician
+participant HMIS
+participant IL
+participant CR
+participant FR
+participant HWR
+participant SHR
+participant TSR
+
+Clinician -> HMIS : Login
+HMIS -> IL: Validate HCW
+IL -> HWR: Validate HCW
+HWR --> IL: Result, true
+IL --> HMIS: Result, true
+
+Clinician->HMIS: Patient enrolment
+HMIS->IL: Patient lookup
+IL->CR: Patient lookup
+
+CR-->IL: Result, CR ID
+IL-->HMIS: Result, CR ID
+
+
+Clinician -> HMIS : start visit
+
+Clinician -> HMIS : Offer service
+HMIS->IL: Pull SHR summary
+IL->SHR: Pull SHR summary
+SHR-->IL: Result, bundle
+IL-->HMIS: Result, bundle
+HMIS->IL: Terminology lookup
+IL->TSR: Terminology lookup
+TSR-->IL: Result, terms
+IL-->HMIS: Result, terms
+
+Clinician->HMIS: End visit
+HMIS->IL: SHR Bundle, Clinical data
+IL->SHR: SHR Bundle, Clinical data
+SHR-->IL: Result, Clinical data creted
+IL-->HMIS: Result, Clinical data creted
