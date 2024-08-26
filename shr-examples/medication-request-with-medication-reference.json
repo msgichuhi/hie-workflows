@@ -1,0 +1,105 @@
+{
+    "resourceType": "MedicationRequest",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/StructureDefinition/patient-diagnosis"
+        ]
+    },
+    "identifier": [
+        {
+            "use": "official",
+            "system": "http://sandbox-hie.health",
+            "value": "HLC-ENC--240802-639329"
+        }
+    ],
+    "status": "active",
+    "intent": "order",
+    "priority": "routine",
+    "medicationReference": {
+        "reference": "Medication/1329AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+        "type": "Medication",
+        "display": "Acetaminophen 500 MG Oral Tablet"
+    },
+    "subject": {
+        "reference": "Patient/BY32923183-3",
+        "type": "Patient",
+        "identifier": {
+            "use": "official",
+            "system": "https://sandbox.kenya-hie.health/api/v4/Patient",
+            "value": "BY32923183-3"
+        }
+    },
+    "encounter": {
+        "reference": "Encounter/HLC-ENC--240802-639329",
+        "type": "Encounter"
+    },
+    "authoredOn": "2024-08-20T08:34:28+03:00",
+    "requester": {
+        "reference": "Practitioner/BY32923183-3",
+        "type": "Practitioner",
+        "identifier": {
+            "use": "official",
+            "system": "https://sandbox.kenya-hie.health/api/v4/Practitioner",
+            "value": "PR32923183-3"
+        }
+    },
+    "dosageInstruction": [
+        {
+            "text": "Amoxicillin 250 MG Chewable Tablet (250MG)",
+            "timing": {
+                "repeat": {
+                    "duration": 5,
+                    "durationUnit": "d"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+                            "code": "160858",
+                            "display": "Twice daily"
+                        }
+                    ],
+                    "text": "Twice daily"
+                }
+            },
+            "asNeededBoolean": false,
+            "route": {
+                "coding": [
+                    {
+                        "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+                        "code": "160240",
+                        "display": "Oral"
+                    }
+                ],
+                "text": "Oral"
+            },
+            "doseAndRate": [
+                {
+                    "doseQuantity": {
+                        "value": 1.0,
+                        "unit": "Tablet",
+                        "code": "1513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                    }
+                }
+            ]
+        }
+    ],
+    "dispenseRequest": {
+        "validityPeriod": {
+            "start": "2024-08-20T08:34:28+03:00"
+        },
+        "numberOfRepeatsAllowed": 0,
+        "quantity": {
+            "value": 15.0,
+            "unit": "Tablet",
+            "code": "1513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        }
+    },
+    "note": [
+        {
+            "authorString": "Dr. John Smith",
+            "time": "2023-08-26T13:00:00Z",
+            "text": "Patient was nervous during measurement, may have influenced systolic reading."
+        }
+    ]
+}
