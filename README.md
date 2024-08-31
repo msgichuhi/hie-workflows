@@ -1,5 +1,5 @@
 # SHA Profiles
-[SHA Profiles](https://docs.google.com/spreadsheets/d/1KX-LHrKSvrcfYpaqIr6p3g_rVsQgUDY1/edit?gid=1740055975#gid=1740055975)
+[SHR Profiles](https://docs.google.com/spreadsheets/d/1KX-LHrKSvrcfYpaqIr6p3g_rVsQgUDY1/edit?gid=1740055975#gid=1740055975)
 
 # Resources Examples
 [SHR Resources](https://github.com/jecihjoy/hie-workflows/tree/main/shr-examples)
