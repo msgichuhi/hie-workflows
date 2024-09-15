@@ -42,9 +42,9 @@
         "identifier": {
             "use": "official",
             "system": "https://api.com/api/sha",
-            "value": "SHXA001"
+            "value": "SHAA001"
         },
-        "display": "SHAX001"
+        "display": "SHAA001"
     },
     "insurance": [
         {
@@ -91,35 +91,23 @@
                             "type": {
                                 "coding": [
                                     {
-                                        "code": "yearly-benefit"
+                                        "code": "sessions-per-year"
                                     }
                                 ]
                             },
-                            "allowedMoney": {
-                                "value": 500000,
-                                "currency": "KSH"
-                            },
-                            "usedMoney": {
-                                "value": 3748,
-                                "currency": "KSH"
-                            }
+                            "allowedUnsignedInt": 12,
+                            "usedUnsignedInt": 4
                         },
                         {
                             "type": {
                                 "coding": [
                                     {
-                                        "code": "weekly-benefit"
+                                        "code": "sessions-per-week"
                                     }
                                 ]
                             },
-                            "allowedMoney": {
-                                "value": 5000,
-                                "currency": "KSH"
-                            },
-                            "usedMoney": {
-                                "value": 3748,
-                                "currency": "KSH"
-                            }
+                            "allowedUnsignedInt": 2,
+                            "usedUnsignedInt": 1
                         }
                     ]
                 }
