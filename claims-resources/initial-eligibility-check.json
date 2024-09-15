@@ -1,0 +1,72 @@
+{
+    "resourceType": "CoverageEligibilityRequest",
+    "id": "52346",
+    "extension": [
+        {
+            "url": "https://moh-ke.info/fhir/StructureDefinition/transfer",
+            "valueBoolean": true
+        },
+        {
+            "url": "https://moh-ke.info/fhir/StructureDefinition/referrer",
+            "valueReference": {
+                "type": "Organization",
+                "identifier": {
+                    "use": "official",
+                    "system": "https://api.com/api/facilities/facilities/?format=JSON&code=15618",
+                    "value": "15618"
+                },
+                "display": "MTRH"
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "system": "http://happyvalley.com/coverageelegibilityrequest",
+            "value": "52346"
+        }
+    ],
+    "status": "active",
+    "priority": {
+        "coding": [
+            {
+                "code": "STAT"
+            }
+        ]
+    },
+    "purpose": [
+        "validation",
+        "discovery"
+    ],
+    "patient": {
+        "type": "Patient",
+        "identifier": {
+            "use": "official",
+            "system": "https://api.com/api/cr/patients/?format=JSON&upi=15618",
+            "value": "CR-9765689"
+        }
+    },
+    "servicedDate": "2014-09-17",
+    "enterer": {
+        "reference": "Practitioner/1"
+    },
+    "insurer": {
+        "reference": "Organization/SHA001"
+    },
+    "facility": {
+        "type": "Location",
+        "identifier": {
+            "use": "official",
+            "system": "https://api.com/api/facilities/facilities/?format=JSON&code=13400",
+            "value": "13400"
+        },
+        "display": "Cheborgei"
+    },
+    "insurance": [
+        {
+            "coverage": {
+                "reference": "Coverage/9876B1"
+            }
+        }
+    ],
+    "item": []
+}
