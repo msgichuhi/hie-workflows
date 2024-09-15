@@ -1,0 +1,129 @@
+{
+    "resourceType": "CoverageEligibilityResponse",
+    "id": "E2500",
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the CoverageEligibilityResponse.</div>"
+    },
+    "identifier": [
+        {
+            "system": "http://www.BenefitsInc.com/fhir/coverageeligibilityresponse",
+            "value": "881234"
+        }
+    ],
+    "status": "active",
+    "purpose": [
+        "validation",
+        "benefits"
+    ],
+    "patient": {
+        "type": "Patient",
+        "identifier": {
+            "use": "official",
+            "system": "https://api.com/api/patients",
+            "value": "CR-001"
+        },
+        "display": "CR-001"
+    },
+    "created": "2014-08-16",
+    "request": {
+        "type": "CoverageEligibilitRequest",
+        "identifier": {
+            "use": "official",
+            "system": "http://www.BenefitsInc.com/fhir/coverageeligibilityrequest/225476332402",
+            "value": "225476332402"
+        },
+        "display": "225476332402"
+    },
+    "outcome": "complete",
+    "disposition": "Policy is currently in-force.",
+    "insurer": {
+        "type": "Organization",
+        "identifier": {
+            "use": "official",
+            "system": "https://api.com/api/sha",
+            "value": "SHXA001"
+        },
+        "display": "SHAX001"
+    },
+    "insurance": [
+        {
+            "coverage": {
+                "reference": "Coverage/9876B1"
+            },
+            "inforce": true,
+            "benefitPeriod": {
+                "start": "2024-08-01",
+                "end": "2024-08-30"
+            },
+            "item": [
+                {
+                    "category": {
+                        "coding": [
+                            {
+                                "system": "http://example.org/fhir/item-codes",
+                                "code": "SHA-12",
+                                "display": "Dental"
+                            }
+                        ]
+                    },
+                    "productOrService": {
+                        "coding": [
+                            {
+                                "system": "http://example.org/fhir/item-codes",
+                                "code": "SHA-12-001",
+                                "display": "Tooth filling"
+                            }
+                        ]
+                    },
+                    "authorizationRequired": true,
+                    "unit": {
+                        "coding": [
+                            {
+                                "system": "http://example.org/fhir/item-codes",
+                                "code": "shared",
+                                "display": "Accessible to any member of the household"
+                            }
+                        ]
+                    },
+                    "benefit": [
+                        {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "code": "yearly-benefit"
+                                    }
+                                ]
+                            },
+                            "allowedMoney": {
+                                "value": 500000,
+                                "currency": "KSH"
+                            },
+                            "usedMoney": {
+                                "value": 3748,
+                                "currency": "KSH"
+                            }
+                        },
+                        {
+                            "type": {
+                                "coding": [
+                                    {
+                                        "code": "weekly-benefit"
+                                    }
+                                ]
+                            },
+                            "allowedMoney": {
+                                "value": 5000,
+                                "currency": "KSH"
+                            },
+                            "usedMoney": {
+                                "value": 3748,
+                                "currency": "KSH"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
