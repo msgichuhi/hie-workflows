@@ -1,0 +1,130 @@
+{
+    "resourceType": "Encounter",
+    "id": "566d4b06-0000-41a1-9ea9-213212ea9512",
+    "identifier": [
+        {
+            "system": "https://shr.kenya-hie.health",
+            "value": "566d4b06-0000-41a1-9ea9-213212ea9512"
+        }
+    ],
+    "status": "finished",
+    "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "OP",
+        "display": "outpatient encounter"
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "https://shr.kenya-hie.health/encounter-types",
+                    "code": "367336001",
+                    "display": "Chemotherapy"
+                }
+            ]
+        }
+    ],
+    "priority": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "103391001",
+                "display": "Urgent"
+            }
+        ]
+    },
+    "period": {
+        "start": "2015-01-17T16:00:00+10:00",
+        "end": "2015-01-17T16:30:00+10:00"
+    },
+    "subject": {
+        "identifier": [
+            {
+                "use": "official",
+                "system": "http://ts-kenyahie.health/patient-identifier",
+                "value": "CR6823084673797-8"
+            }
+        ]
+    },
+    "participant": [
+        {
+            "individual": {
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "http://ts-kenyahie.health/professional-identifier",
+                        "value": "PUID-0142928-6"
+                    }
+                ],
+                "type": "Practitioner"
+            }
+        }
+    ],
+    "serviceProvider": {
+        "identifier": [
+            {
+                "use": "official",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://ts-kenyahie.health/facility-identifier-type",
+                            "code": "fr-code"
+                        }
+                    ]
+                },
+                "system": "http://itm/license/provider-license",
+                "value": "FID-22-101101-0"
+            }
+        ],
+        "type": "Organization"
+    },
+    "hospitalization": {
+        "origin": {
+            "identifier": [
+                {
+                    "use": "official",
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://ts-kenyahie.health/facility-identifier-type",
+                                "code": "fr-code"
+                            }
+                        ]
+                    },
+                    "system": "http://itm/license/provider-license",
+                    "value": "FID-22-101101-0"
+                }
+            ],
+            "type": "Organization"
+        },
+        "admitSource": {
+            "coding": [
+                {
+                    "system": "https://shr.kenya-hie.health/fhir/Valueset/encounter-admit-source",
+                    "code": "FMLYM",
+                    "display": "Family member"
+                }
+            ]
+        },
+        "reAdmission": {
+            "coding": [
+                {
+                    "system": "https://hl7.org/fhir/R4/v2/0092/index.html",
+                    "code": "R",
+                    "display": "Re-admission"
+                }
+            ]
+        },
+        "dischargeDisposition": [
+            {
+                "coding": [
+                    {
+                        "system": "https://hl7.org/fhir/R4/valueset-encounter-discharge-disposition.html",
+                        "code": "rehab",
+                        "display": "Rehabilitation"
+                    }
+                ]
+            }
+        ]
+    }
+}

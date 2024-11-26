@@ -1,12 +1,12 @@
 {
     "resourceType": "Condition",
+    "id": "local-primary-key-for-this-record-in-hmis",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/StructureDefinition/patient-diagnosis"
         ]
     },
     "identifier": {
-        "use": "official",
         "system": "https://shr.kenya-hie.health",
         "value": "local-primary-key-for-this-record-in-hmis"
     },
@@ -53,14 +53,10 @@
                 "code": "123565",
                 "display": "Cough"
             }
-        ],
-        "text": "Cough"
+        ]
     },
     "subject": {
-        "reference": "Patient/BY32923183-3",
-        "type": "Patient",
         "identifier": {
-            "use": "official",
             "system": "https://sandbox.kenya-hie.health/api/v4/Patient",
             "value": "BY32923183-3"
         }
@@ -68,10 +64,7 @@
     "onsetDateTime": "2024-08-20T08:10:41+03:00",
     "recordedDate": "2024-08-20T08:10:41+03:00",
     "recorder": {
-        "reference": "Practitioner/BY32923183-3",
-        "type": "Practitioner",
         "identifier": {
-            "use": "official",
             "system": "https://sandbox.kenya-hie.health/api/v4/Practitioner",
             "value": "PR32923183-3"
         }
@@ -80,7 +73,7 @@
         {
             "authorString": "Dr. John Smith",
             "time": "2023-08-26T13:00:00Z",
-            "text": "Patient was nervous during measurement, may have influenced systolic reading."
+            "text": "Patient was nervous during measurement, may have read to wrong observation."
         }
     ]
 }

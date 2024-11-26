@@ -1,0 +1,252 @@
+{
+    "id": "3409881e-41bf-413a-94d1-d5d9508ada52",
+    "meta": {
+        "profile": [
+            "https://mis.apeiro-digital.com/fhir/StructureDefinition/bundle%7C1.0.0"
+        ]
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "https://mis.apeiro-digital.com/fhir/Organization/1128999",
+            "resource": {
+                "id": "MFL-1128999",
+                "meta": {
+                    "profile": [
+                        "https://mis.apeiro-digital.com/fhir/StructureDefinition/provider-organization%7C1.0.0"
+                    ]
+                },
+                "name": "COAST GENERAL TEACHING \u0026REFFERAL HOSPITAL",
+                "extension": [
+                    {
+                        "url": "https://mis.apeiro-digital.com/fhir/StructureDefinition/facility-level",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://mis.apeiro-digital.com/fhir/StructureDefinition/facility-level",
+                                    "code": "LEVEL 1",
+                                    "display": "LEVEL 1"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "https://mis.apeiro-digital.com/fhir/license/provider-license",
+                        "value": "PR-FHIR"
+                    }
+                ],
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://mis.apeiro-digital.com/fhir/terminology/CodeSystem/organization-type",
+                                "code": "prov"
+                            }
+                        ]
+                    }
+                ],
+                "resourceType": "Organization"
+            }
+        },
+        {
+            "fullUrl": "https://mis.apeiro-digital.com/fhir/Patient/CR7382849846804-1",
+            "resource": {
+                "id": "CR7382849846804-1",
+                "meta": {
+                    "profile": [
+                        "https://mis.apeiro-digital.com/fhir/StructureDefinition/patient%7C1.0.0"
+                    ]
+                },
+                "name": [
+                    {
+                        "text": "ASMA ALI MOHAMMED",
+                        "family": "MOHAMMED",
+                        "given": [
+                            "ASMA",
+                            "ALI"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1985-11-08",
+                "resourceType": "Patient"
+            }
+        },
+        {
+            "fullUrl": "https://mis.apeiro-digital.com/fhir/Claim/3409881e-41bf-413a-94d1-d5d9508ada52",
+            "resource": {
+                "id": "3409881e-41bf-413a-94d1-d5d9508ada52",
+                "identifier": [
+                    {
+                        "system": "https://mis.apeiro-digital.com/fhir/claim",
+                        "value": "3409881e-41bf-413a-94d1-d5d9508ada52"
+                    }
+                ],
+                "status": "active",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+                            "code": "institutional"
+                        }
+                    ]
+                },
+                "subType": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/ex-claimsubtype",
+                            "code": "ip"
+                        }
+                    ]
+                },
+                "use": "claim",
+                "patient": {
+                    "reference": "https://mis.apeiro-digital.com/fhir/Patient/CR7382849846804-1"
+                },
+                "billablePeriod": {
+                    "start": "2024-10-25T16:37:43+03:00",
+                    "end": "2024-10-26T16:37:42+03:00"
+                },
+                "created": "2024-10-25",
+                "provider": {
+                    "reference": "https://mis.apeiro-digital.com/fhir/Organization/1128999"
+                },
+                "priority": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+                            "code": "normal"
+                        }
+                    ]
+                },
+                "supportingInfo": [
+                    {
+                        "sequence": 1,
+                        "category": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                                    "code": "attachment",
+                                    "display": "Attachment"
+                                }
+                            ]
+                        },
+                        "valueAttachment": {
+                            "contentType": "application/pdf",
+                            "language": "en",
+                            "url": "https://api-edi.provider.sha.go.ke/media/edi/2024/10/25/0b073185-2bd1-4356-bbae-a9769bc3f029_ASMA_MOHAMED_OTH25-10-24.pdf",
+                            "size": 998405,
+                            "title": "ASMA MOHAMED OTH25-10-24.pdf"
+                        }
+                    },
+                    {
+                        "sequence": 2,
+                        "category": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                                    "code": "attachment",
+                                    "display": "Attachment"
+                                }
+                            ]
+                        },
+                        "valueAttachment": {
+                            "contentType": "application/pdf",
+                            "language": "en",
+                            "url": "https://api-edi.provider.sha.go.ke/media/edi/2024/10/25/a87e848e-bc36-49d0-9793-20d0e369fea1_ASMA_MOHAMED_PRE_25-10-24.pdf",
+                            "size": 964492,
+                            "title": "ASMA MOHAMED PRE 25-10-24.pdf"
+                        }
+                    },
+                    {
+                        "sequence": 3,
+                        "category": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                                    "code": "attachment",
+                                    "display": "Attachment"
+                                }
+                            ]
+                        },
+                        "valueAttachment": {
+                            "contentType": "application/pdf",
+                            "language": "en",
+                            "url": "https://api-edi.provider.sha.go.ke/media/edi/2024/10/25/4e58894d-9be5-4042-b913-9763e7ab9a46_ASMA_MOHAMED_INV_25-10-24.pdf",
+                            "size": 386113,
+                            "title": "ASMA MOHAMED INV 25-10-24.pdf"
+                        }
+                    }
+                ],
+                "diagnosis": [
+                    {
+                        "sequence": 1,
+                        "diagnosisCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://mis.apeiro-digital.com/fhir/terminology/CodeSystem/icd-11",
+                                    "code": "JB22.1",
+                                    "display": "Delivery by emergency caesarean section"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "item": [
+                    {
+                        "sequence": 1,
+                        "productOrService": {
+                            "coding": [
+                                {
+                                    "system": "https://mis.apeiro-digital.com/fhir/CodeSystem/intervention-codes",
+                                    "code": "SHA-01-002"
+                                }
+                            ]
+                        },
+                        "servicedDate": "2024-10-25",
+                        "quantity": {
+                            "value": 1.00
+                        },
+                        "unitPrice": {
+                            "value": 30000.00,
+                            "currency": "KES"
+                        },
+                        "factor": 1,
+                        "net": {
+                            "value": 30000.000000,
+                            "currency": "KES"
+                        }
+                    }
+                ],
+                "total": {
+                    "value": 30000.000000,
+                    "currency": "KES"
+                },
+                "related": [
+                    {
+                        "claim": {
+                            "identifier": {
+                                "system": "https://mis.apeiro-digital.com/fhir/claim",
+                                "value": "82a666b1-0574-4bf8-888a-b520b972d8f6"
+                            }
+                        },
+                        "relationship": {
+                            "coding": [
+                                {
+                                    "system": "https://mis.apeiro-digital.com/fhir/CodeSystem/claim-relation-type",
+                                    "code": "preauthorization"
+                                }
+                            ],
+                            "text": "Preauthorization"
+                        }
+                    }
+                ],
+                "resourceType": "Claim"
+            }
+        }
+    ],
+    "resourceType": "Bundle"
+}

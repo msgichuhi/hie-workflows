@@ -1,12 +1,7 @@
 {
     "resourceType": "Observation",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/StructureDefinition/single-value-observations"
-        ]
-    },
+    "id": "local-primary-key-for-this-record-in-hmis",
     "identifier": {
-        "use": "official",
         "system": "https://shr.kenya-hie.health",
         "value": "local-primary-key-for-this-record-in-hmis"
     },
@@ -19,8 +14,7 @@
                     "code": "vital-signs",
                     "display": "Vital Signs"
                 }
-            ],
-            "text": "Vital Signs"
+            ]
         }
     ],
     "code": {
@@ -30,8 +24,7 @@
                 "code": "29463-7",
                 "display": "Body Weight"
             }
-        ],
-        "text": "Body Weight"
+        ]
     },
     "valueQuantity": {
         "value": 67.0,
@@ -40,20 +33,14 @@
         "code": "kg"
     },
     "subject": {
-        "reference": "Patient/BY32923183-3",
-        "type": "Patient",
         "identifier": {
-            "use": "official",
             "system": "https://sandbox.kenya-hie.health/api/v4/Patient",
             "value": "BY32923183-3"
         }
     },
     "effectiveDateTime": "2024-08-12T14:23:41.455054",
     "perfomer": {
-        "reference": "Practitioner/BY32923183-3",
-        "type": "Practitioner",
         "identifier": {
-            "use": "official",
             "system": "https://sandbox.kenya-hie.health/api/v4/Practitioner",
             "value": "PR32923183-3"
         }

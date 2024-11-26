@@ -1,0 +1,79 @@
+{
+    "resourceType": "Bundle",
+    "id": "6a1165f7-77c5-4b9d-b78c-312cf2738dfd",
+    "meta": {
+        "lastUpdated": "2024-11-26T11:20:51.381+00:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://localhost:8082/fhir/Composition?_count=1000"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://localhost:8082/fhir/Composition/566d4b06-0000-41a1-9ea9-213212ea95120",
+            "resource": {
+                "resourceType": "Composition",
+                "id": "566d4b06-0000-41a1-9ea9-213212ea95120",
+                "meta": {
+                    "versionId": "14",
+                    "lastUpdated": "2024-11-26T10:46:25.108+00:00",
+                    "source": "#ZX02pREkLTXzzKbc"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "code": "11488-4",
+                            "display": "Consult Note"
+                        }
+                    ]
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "11488-4",
+                                "display": "Consult Note"
+                            }
+                        ]
+                    }
+                ],
+                "subject": {
+                    "identifier": {
+                        "system": "http://ts-kenyahie.health/patient-identifier",
+                        "value": "CR6823084673797-8"
+                    }
+                },
+                "date": "2015-01-17T09:00:00+03:00",
+                "custodian": {
+                    "identifier": {
+                        "system": "http://itm/license/provider-license",
+                        "value": "FID-22-101101-0"
+                    }
+                },
+                "event": [
+                    {
+                        "detail": [
+                            {
+                                "reference": "Encounter/566d4b06-0000-41a1-9ea9-213212ea95120"
+                            },
+                            {
+                                "reference": "Observation/local-primary-key-for-this-obs-in-hmisx"
+                            },
+                            {
+                                "reference": "Condition/local-primary-key-for-this-condition-in-hmisy"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
+}

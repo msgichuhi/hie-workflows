@@ -1,0 +1,204 @@
+{
+    "id": "566d4b06-0e6d-0000-9ea9-213212ea9512",
+    "type": "batch",
+    "resourceType": "Bundle",
+    "timestamp": "2024-11-10T10:12:22.22+03:00",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "566d4b06-0000-41a1-9ea9-213212ea95120",
+                "identifier": [
+                    {
+                        "system": "https://shr.kenya-hie.health",
+                        "value": "566d4b06-0000-41a1-9ea9-213212ea95120"
+                    }
+                ],
+                "status": "finished",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "OP",
+                    "display": "outpatient encounter"
+                },
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://shr.kenya-hie.health/encounter-types",
+                                "code": "367336001",
+                                "display": "Chemotherapy"
+                            }
+                        ]
+                    }
+                ],
+                "priority": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "103391001",
+                            "display": "Urgent"
+                        }
+                    ]
+                },
+                "period": {
+                    "start": "2015-01-17T16:00:00+10:00",
+                    "end": "2015-01-17T16:30:00+10:00"
+                },
+                "subject": {
+                    "identifier": [
+                        {
+                            "system": "http://ts-kenyahie.health/patient-identifier",
+                            "value": "CR6823084673797-8"
+                        }
+                    ]
+                },
+                "participant": [
+                    {
+                        "individual": {
+                            "identifier": [
+                                {
+                                    "system": "http://ts-kenyahie.health/professional-identifier",
+                                    "value": "PUID-0142928-6"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "serviceProvider": {
+                    "identifier": [
+                        {
+                            "system": "http://itm/license/provider-license",
+                            "value": "FID-22-101101-0"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "local-primary-key-for-this-obs-in-hmisx",
+                "identifier": {
+                    "system": "https://shr.kenya-hie.health",
+                    "value": "local-primary-key-for-this-obs-in-hmisx"
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "https://ocl.kenya-hie.health/CodeSystem/observation-category",
+                                "code": "vital-signs",
+                                "display": "Vital Signs"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "29463-7",
+                            "display": "Body Weight"
+                        }
+                    ]
+                },
+                "valueQuantity": {
+                    "value": 67.0,
+                    "unit": "kg",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "kg"
+                },
+                "subject": {
+                    "identifier": {
+                        "system": "https://sandbox.kenya-hie.health/api/v4/Patient",
+                        "value": "BY32923183-3"
+                    }
+                },
+                "effectiveDateTime": "2024-08-12T14:23:41.455054",
+                "perfomer": {
+                    "identifier": {
+                        "system": "https://sandbox.kenya-hie.health/api/v4/Practitioner",
+                        "value": "PR32923183-3"
+                    }
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Condition",
+                "id": "local-primary-key-for-this-condition-in-hmisy",
+                "identifier": {
+                    "system": "https://shr.kenya-hie.health",
+                    "value": "local-primary-key-for-this-condition-in-hmisy"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "active",
+                            "display": "ACTIVE"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                            "code": "provisional",
+                            "display": "Provisional"
+                        }
+                    ]
+                },
+                "category": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/ValueSet/condition-category",
+                            "code": "problem-list-item",
+                            "display": "Problem List Item"
+                        }
+                    ]
+                },
+                "severity": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-severity",
+                            "code": "moderate",
+                            "display": "Moderate"
+                        }
+                    ]
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "https://openconceptlab.org/orgs/CIEL/sources/CIEL",
+                            "code": "123565",
+                            "display": "Cough"
+                        }
+                    ]
+                },
+                "subject": {
+                    "identifier": {
+                        "system": "https://sandbox.kenya-hie.health/api/v4/Patient",
+                        "value": "BY32923183-3"
+                    }
+                },
+                "onsetDateTime": "2024-08-20T08:10:41+03:00",
+                "recordedDate": "2024-08-20T08:10:41+03:00",
+                "recorder": {
+                    "identifier": {
+                        "system": "https://sandbox.kenya-hie.health/api/v4/Practitioner",
+                        "value": "PR32923183-3"
+                    }
+                },
+                "note": [
+                    {
+                        "authorString": "Dr. John Smith",
+                        "time": "2023-08-26T13:00:00Z",
+                        "text": "Patient was nervous during measurement, may have read to wrong observation."
+                    }
+                ]
+            }
+        }
+    ]
+}
